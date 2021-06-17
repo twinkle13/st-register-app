@@ -10,7 +10,7 @@
       <label for="salutation" class="lable columns">Salutation:</label>
       <select class="input columns" id="salutation" name="salutation" v-model="salutation" >
         <option value>Select one</option>
-        <option value="Mr">Mr</option>
+        <option value="Mr">Mr.</option>
         <option value="Ms">Ms</option>
       </select>
       </div>
