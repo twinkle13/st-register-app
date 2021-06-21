@@ -160,7 +160,7 @@ export default {
   methods: {
     submitForm() {
       console.log('Registered!!!');
-      const { text } = await (await fetch("/api/FirstFunction/twinkle")).json();
+      const { text } = await (await fetch("/api/firstfunction/twinkle")).json();
       this.message = text;
     },
     validateInput() {
