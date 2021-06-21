@@ -162,7 +162,7 @@ export default {
       console.log('Registered!!!');
       //const { text } = fetch("/api/FirstFunction/twinkle").json();
       //this.message = text;
-      fetch("/api/FirstFunction/twinkle")
+      fetch("/api/FirstFunction?name=twinkle")
     .then(response => response.json())
     .then(data => (this.message = data));
     },
