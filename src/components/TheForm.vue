@@ -3,7 +3,7 @@
         <div class="st__title"> <h1 class="title">my.st.com account creation</h1>
          </div> 
          <h2 class="design-support-calculators margin-left-15">Your Profile</h2>
-
+<div>{{ message }}</div>
   <form @submit.prevent="submitForm">
     <div class="form-control">
       <div class="form-group ">
@@ -121,7 +121,7 @@ I understand that I can withdraw my consent at any time through opt-out links em
       <label for="confirm-terms">I have read and understood the Terms of Use  and Privacy Policy <span class="text-red">*</span></label>
     </div>
     <div>
-      <button>Register</button>
+      <button >Register</button>
     </div>
   </form>
 </div>
@@ -153,12 +153,15 @@ export default {
       states: states,
       state: null,
       phoneNumber:null,
-      zipcode:null
+      zipcode:null,
+      message: ""
     };
   },
   methods: {
     submitForm() {
-      console.log('Registered!!!')
+      console.log('Registered!!!');
+      const { text } = await (await fetch("/api/FirstFunction/twinkle")).json();
+      this.message = text;
     },
     validateInput() {
       console.log('validation!!!')
