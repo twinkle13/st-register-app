@@ -160,8 +160,11 @@ export default {
   methods: {
     submitForm() {
       console.log('Registered!!!');
-      const { text } = fetch("/api/FirstFunction/twinkle").json();
-      this.message = text;
+      //const { text } = fetch("/api/FirstFunction/twinkle").json();
+      //this.message = text;
+      fetch("/api/FirstFunction/twinkle")
+    .then(response => response.json())
+    .then(data => (this.message = data));
     },
     validateInput() {
       console.log('validation!!!')
