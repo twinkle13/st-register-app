@@ -251,7 +251,12 @@ export default {
       //const { text } = fetch("/api/FirstFunction/twinkle").json();
       //this.message = text;
       
-      fetch("/api/FirstFunction?name=twinkle",{"method":"GET"})
+      fetch("/api/FirstFunction?name=twinkle",
+      {"method":"GET",
+      "headers": {
+        "Access-Control-Allow-Origin": "no-cors"
+      }
+    })
     .then(response => {
       if(response.ok){
       return response.json()
