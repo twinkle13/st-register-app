@@ -5,9 +5,15 @@ module.exports = async function (context, req) {
     const responseMessage = name
         ? "Hello, " + name + ". This HTTP triggered function executed successfully."
         : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
+        context.log(responseMessage);
+        let text = '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
-    context.res = {
+        const obj = JSON.parse(text);
+        context.res = {
         // status: 200, /* Defaults to 200 */
-        body: responseMessage.toJSON()
+        body: obj
     };
 }
