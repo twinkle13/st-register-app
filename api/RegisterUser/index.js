@@ -1,6 +1,7 @@
 module.exports = async function (context, req) {
     context.log('POST REQUEST');
 
+        /*
         let text = '{' +
         ' "ID":"1" ' +
         ' "salutation":"'+ req.body.salutation + '" ,' + 
@@ -17,6 +18,12 @@ module.exports = async function (context, req) {
         ' "confirm":"'+ req.body.confirm + '" ,' + 
         ' "confirmSubscribe":"'+ req.body.confirmSubscribe + '" ' +
         ', "" }';
+        */
+
+        let text = '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
 
         const obj = JSON.parse(text);
     context.res = {
