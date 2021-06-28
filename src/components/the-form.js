@@ -79,6 +79,7 @@ export default {
       //const { text } = fetch("/api/FirstFunction/twinkle").json();
       //this.message = text;
       // ----- GET API -----
+     /*
       fetch("/api/FirstFunction?name=twinkle",
       {"method":"GET",
       "headers": {
@@ -99,7 +100,7 @@ export default {
     .catch(err => {
       console.log(err);
     });
-
+    */
     // ---- POST API
     fetch(
       "/api/RegisterUser/",
