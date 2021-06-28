@@ -11,9 +11,10 @@ form {
   color: #74757c;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0 0 25px 0;
+  margin: 25px 0 25px 0;
   display: block;
   font-family: Arial,Helvetica,sans-serif;
+  padding-top: 2rem;
 }
 label.inline {
     margin: 0;
@@ -35,7 +36,6 @@ label.inline {
 .st_form{
   max-width: 1083px;
   width: 100%;
-  padding: 2rem;
   background-color: #ffffff;
   margin: 0 auto;
 }
@@ -408,6 +408,8 @@ input[type='text'], input[type='password'], input[type='number'], input[type='em
 .st-row {
     margin: 0 auto;
     max-width: 1083px;
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
     width: 100%;
 }
 .row.error .columns {
