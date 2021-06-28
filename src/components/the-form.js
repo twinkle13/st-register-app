@@ -116,8 +116,7 @@ export default {
       }
     })
     .then(response => {
-      console.log("POST RESPONSE"+response);
-      this.message = response.body; 
+      console.log("POST RESPONSE"+response.body);
     })
     .catch(err => {
       console.log(err);
