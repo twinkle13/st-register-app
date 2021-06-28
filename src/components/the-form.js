@@ -102,10 +102,10 @@ export default {
 
     // ---- POST API
     fetch(
-      '/api/RegisterUser/',
+      "/api/RegisterUser/",
       {
-        method: 'POST',
-        body: JSON.stringify(this.user)
+        "method": "POST",
+        "body": JSON.stringify(this.user)
       }
     )
     .then(response => {
@@ -116,6 +116,7 @@ export default {
       }
     })
     .then(response => {
+      console.log("POST RESPONSE"+response);
       console.log("POST RESPONSE"+response.body);
     })
     .catch(err => {
