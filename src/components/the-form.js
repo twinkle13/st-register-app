@@ -117,7 +117,7 @@ export default {
       }
     })
     .then(response => {
-      console.log("POST RESPONSE"+response);
+      console.log("POST RESPONSE"+JSON.stringify(response));
       console.log("POST RESPONSE"+response.body);
     })
     .catch(err => {
